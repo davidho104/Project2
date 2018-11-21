@@ -2,7 +2,7 @@
   "development": {
     "username": "testuser",
     "password": "test123",
-    "database": "burgers_db",
+    "database": "automentor_db",
     "host": "192.168.1.12",
     "port": 3306,
     "dialect": "mysql"
