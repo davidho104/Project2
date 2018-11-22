@@ -5,7 +5,7 @@ CREATE DATABASE automentor_db;
 USE automentor_db;
 
 
--- note: you should let sequelize to generate the table instead
+-- note: you should let sequelize to generate the tables instead
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -21,7 +21,9 @@ CREATE TABLE `users` (
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
-  UNIQUE KEY `username` (`username`)
+  UNIQUE KEY `username` (`username`),
+  KEY `permission_id` (`permission_id`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`permission_id`) REFERENCES `roles` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE `quizzes` (
@@ -40,13 +42,24 @@ CREATE TABLE `quizzes` (
 
 CREATE TABLE `results` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `quiz_id` int(11) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `quiz_id` int(11) NOT NULL,
   `user_answer` varchar(255) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   `createdAt` datetime DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
+  UNIQUE KEY `id` (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `quiz_id` (`quiz_id`),
+  CONSTRAINT `results_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `results_ibfk_2` FOREIGN KEY (`quiz_id`) REFERENCES `quizzes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `role` (`role`)
 );

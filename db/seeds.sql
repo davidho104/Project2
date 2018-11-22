@@ -1,3 +1,7 @@
+-- insert these lines first to avoid foreign key violation
+INSERT INTO roles (role) VALUES ("manager");
+INSERT INTO roles (role) VALUES ("employee");
+------
 INSERT INTO users (username, first_name, last_name, picture, permission_id) 
 VALUES ("michael", "Michael", "Scott", "michael.png", "1");
 INSERT INTO users (username, first_name, last_name, picture, permission_id) 
