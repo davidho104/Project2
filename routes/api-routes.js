@@ -7,6 +7,28 @@
 
 var db = require("../models");
 
+//Relations
+db.role.hasOne(db.user, {
+    foreignKey: {
+        name: 'permission_id',
+        allowNull: true,
+    }
+});
+
+db.user.hasMany(db.result, {
+    foreignKey: {
+        name: 'user_id',
+        allowNull: false
+    }
+});
+
+db.quiz.hasMany(db.result, {
+    foreignKey: {
+        name: 'quiz_id',
+        allowNull: false
+    }
+});
+
 // Routes
 // =============================================================
 module.exports = function (app) {
