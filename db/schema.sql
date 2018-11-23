@@ -63,3 +63,15 @@ CREATE TABLE `roles` (
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `role` (`role`)
 );
+
+CREATE INDEX idx_users_username ON users (username);
+CREATE INDEX idx_users_name ON users (first_name, last_name); 
+CREATE INDEX idx_users_email ON users (email);
+CREATE INDEX idx_quizzes_category_id ON quizzes (category_id);
+CREATE INDEX idx_quizzes_type_id ON quizzes (type_id); 
+CREATE INDEX idx_quizzes_question ON quizzes (question);
+CREATE INDEX idx_quizzes_choices ON quizzes (choices);
+CREATE INDEX idx_quizzes_answer ON quizzes (answer);
+CREATE INDEX idx_quizzes_next ON quizzes (next_id);
+CREATE INDEX idx_results_user_answer ON results (user_answer);
+CREATE INDEX idx_results_score ON results (score);

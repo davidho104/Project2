@@ -86,4 +86,115 @@ module.exports = function (app) {
             .destroy({ where: { id: req.params.id } }).then(results => res.json(results));
     });
 
+    // ---- automentor api routes: user
+
+    // GET route for select all 
+    app.get("/api/users", function (req, res) {
+
+        db.user
+            .findAll().then(result => res.json(result));
+    });
+
+    // GET - select one
+    app.get("/api/users/:id", function (req, res) {
+
+        db.user
+            .findOne({ where: { id: req.params.id } }).then(result => res.json(result));
+    });
+
+
+    // POST - insert
+    app.post("/api/users", function (req, res) {
+
+        db.user
+            .create(req.body).then(results => res.json(results));
+
+    });
+
+    // PUT - update
+    app.put("/api/users/:id", function (req, res) {
+        db.user
+            .update({ devoured: req.body.devoured }, { where: { id: req.params.id } }).then(results => res.json(results));
+    });
+
+    // DELETE delete 
+    app.delete("/api/users/:id", function (req, res) {
+        db.user
+            .destroy({ where: { id: req.params.id } }).then(results => res.json(results));
+    });
+
+    // ---- automentor api routes: quiz
+
+    // GET route for select all 
+    app.get("/api/quizzes", function (req, res) {
+
+        db.quiz
+            .findAll().then(result => res.json(result));
+    });
+
+    // GET - select one
+    app.get("/api/quizzes/:id", function (req, res) {
+
+        db.quiz
+            .findOne({ where: { id: req.params.id } }).then(result => res.json(result));
+    });
+
+
+    // POST - insert
+    app.post("/api/quizzes", function (req, res) {
+
+        db.quiz
+            .create(req.body).then(results => res.json(results));
+
+    });
+
+    // PUT - update
+    app.put("/api/quizzes/:id", function (req, res) {
+        db.quiz
+            .update({ devoured: req.body.devoured }, { where: { id: req.params.id } }).then(results => res.json(results));
+    });
+
+    // DELETE delete 
+    app.delete("/api/quizzes/:id", function (req, res) {
+        db.quiz
+            .destroy({ where: { id: req.params.id } }).then(results => res.json(results));
+    });
+
+    // ---- automentor api routes: resutls
+
+    // GET route for select all 
+    app.get("/api/results", function (req, res) {
+
+        db.result
+            .findAll().then(result => res.json(result));
+    });
+
+    // GET - select one user's result
+
+    app.get("/api/results/:userid", function (req, res) {
+
+        db.result
+            .findAll({ where: { user_id: req.params.userid } }).then(result => res.json(result));
+    });
+
+
+    // POST - insert
+    app.post("/api/results", function (req, res) {
+
+        db.result
+            .create(req.body).then(results => res.json(results));
+
+    });
+
+    // PUT - update
+    app.put("/api/results/:id", function (req, res) {
+        db.result
+            .update({ devoured: req.body.devoured }, { where: { id: req.params.id } }).then(results => res.json(results));
+    });
+
+    // DELETE delete 
+    app.delete("/api/results/:id", function (req, res) {
+        db.result
+            .destroy({ where: { id: req.params.id } }).then(results => res.json(results));
+    });
 };
