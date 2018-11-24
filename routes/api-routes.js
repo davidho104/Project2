@@ -6,8 +6,12 @@
 // =============================================================
 
 var db = require("../models");
+var Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
-//Relations
+//Relations (foreign key constraint)
+// -- need to have both hasOne and BelongsTo to avoid reference error
+//    "ReferenceError: [model] is not defined"
 db.role.hasOne(db.user, {
     foreignKey: {
         name: 'permission_id',
@@ -175,6 +179,55 @@ module.exports = function (app) {
 
         db.result
             .findAll({ where: { user_id: req.params.userid } }).then(result => res.json(result));
+    });
+
+
+    app.get("/api/results/:userid/:quizid", function (req, res) {
+
+        let whereStatement = {};
+        whereStatement.user_id = req.params.userid;
+        whereStatement.id = req.params.quizid;
+
+        // Example of where clause
+        db.result
+            .findAll({ where: whereStatement }).then(result => res.json(result));
+    });
+
+    app.get("/api/resultsbydate/:date", function (req, res) {
+
+        // not done yet
+        // Example of less than
+        db.result
+            .findAll({ where: { id: { [Op.lt]: 4 } } }).then(result => res.json(result));
+    });
+
+    app.get("/api/resultsbydate/:date/:userid", function (req, res) {
+
+        let whereStatement = {};
+        whereStatement.user_id = req.params.userid;
+
+        // not done yet
+        db.result
+            .findAll({ where: whereStatement }).then(result => res.json(result));
+    });
+
+    app.get("/api/resultsbyusername/:username", function (req, res) {
+
+        let whereStatement = {};
+        whereStatement.username = req.params.username;
+
+        // Example of Join Statement
+        // SELECT * FROM users JOIN results ON (users.id = results.user_id) where users.username = 'jim';
+        // required=true means inner join
+        // required=false means left outer join
+        db.user
+            .findAll({
+                where: whereStatement,
+                include: [{
+                    model: db.result,
+                    required: true
+                }]
+            }).then(result => res.json(result));
     });
 
 
