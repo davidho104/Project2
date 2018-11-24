@@ -8,6 +8,6 @@ Concept: JUMP-START – A training program for your first day at work that will pr
 
 What is in MYSQL?: The questions, the answers, the accounts of each player, the scores and times of each attempt.
 
-##Contributors
-##
+## Contributors
+
 Jump-Start Bot was originally created by David Ho, Lauren Martinez, Raymond Won, and Brian Swift.
