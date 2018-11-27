@@ -1,3 +1,80 @@
+/* backgroun parallax scorll */
+body  {
+  background-image: url("https://i0.wp.com/tdkom.com.br/wp-content/uploads/2017/11/bg-internet-overlay.jpg?ssl=1");
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: scroll;
+}
+
+#companyLogo {
+  display:block;
+  margin: 14px;
+  text-align: center;
+  background-position: center top;
+}
+
+#loginBlock, #createAccountBlock {
+  background: rgba(236, 243, 244, .65);
+  width: 400px;
+  height: 400px;
+  margin: 7em auto;
+  border-radius: 2em;
+  box-shadow: 0px 11px 35px 2px black;
+}
+
+.signIn {
+  padding-top: 40px;
+  color:  rgb(20, 142, 203);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.usernameInput, .passwordInput {
+  width: 76%;
+  color: rgb(20, 142, 203);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgb(20, 142, 203, .35);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgb(20, 142, 203));
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.submitButton {
+  cursor: pointer;
+  border-radius: 5em;
+  color: rgb(20, 142, 203);
+  background: linear-gradient(to right,  rgb(20, 142, 203));
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 35%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgotPassword {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  padding-top: 15px;
+}
+    
 .list-group-item {
   line-height: 2.5;
 }
