@@ -1,0 +1,124 @@
+/* background parallax scroll */
+*{
+  color: white;
+}
+body  {
+  background-image: url("../assets/img/office\ background.jpg");
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: scroll;
+}
+
+#companyLogo {
+  opacity: .75;
+  display:block;
+  /* margin: 5px; */
+  text-align: center;
+  background-position: center top;
+}
+
+#loginBlock, #createAccountBlock {
+  background: rgba(80, 105, 128, 0.6);
+  width: 350px;
+  height: 432px;
+  margin: 2.1em auto;
+  box-shadow: 0px 11px 28px .5px black;
+}
+
+.signIn,h3 {
+  padding-top: 35px;
+  color:  white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.usernameInput, .passwordInput {
+  width: 76%;
+  /* color: rgb(20, 142, 203); */
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: white;
+  padding: 10px 20px;
+  border: none;
+  /* border-radius: 20px; */
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgb(20, 142, 203));
+  /* margin-bottom: 50px; */
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 7px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.signInButton{
+  color:white;  
+  cursor: pointer;
+  width: 76%;
+  font-weight: 540;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background:	rgb(223, 100, 86);
+  padding: 11px 100px;
+  /* border: none; */
+  /* border-radius: 40px; */
+  /* outline: none; */
+  /* box-sizing: border-box; */
+  /* border: 2px solid rgb(20, 142, 203)); */
+  margin-top: 22px;
+  margin-left: 45px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#createSubmit{
+  background:	rgb(223, 100, 86);
+
+}
+
+.forgotPassword {
+  cursor: pointer;
+  width: 76%;
+  color:white;
+  font-weight: 540;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgb(126, 99, 114);
+  padding: 11px 60px;
+  /* border: none; */
+  /* border-radius: 40px; */
+  /* outline: none; */
+  /* box-sizing: border-box; */
+  /* border: 2px solid rgb(20, 142, 203)); */
+  /* margin-top: 20px; */
+  margin-top: -8px;
+  margin-left: 45px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#createAccount2{
+  background: rgba(46, 86, 122, 0.6);
+  padding-top: 12px;
+  padding-bottom: 23px;
+}
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+a{
+  color: white;
+  font-weight: 630;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.row{
+  font-size: 18px;
+}
