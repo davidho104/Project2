@@ -38,8 +38,9 @@
       <div>
          <form action="createNewUser">
             <div class="col-10 offset-1 text-center">
-               <h3>Manager or Employee?</h3>
+               <h3>Create Account</h3>
             </div>
+            <br>
             <div class="row">
                <div class="col-6 text-center">
                   <input type="radio" name="type" value="manager" align="right"> Manager<br>
@@ -48,39 +49,34 @@
                   <input type="radio" name="type" value="rent" align="left"> Employee<br>
                </div>
             </div>
-            <hr>
+            <hr><br>
             <div class="row">
-               <div class="col-sm-4">
-                  <p align="right">User Name: </p>
+               <div class="col-sm-7">
                </div>
-               <div class="col-sm-8" align="left">
-                  <input type="text" required="Required" style="width: 220px" placeholder="CodeNameDuchess">
+               <div id="createNewUserInputBox" class="col-sm-8">
+                  <input type="text" required="Required" placeholder="User Name" class="usernameInput">
                </div>
             </div>
 
             <div class="row">
-               <div class="col-sm-4">
-                  <p align="right">Email: </p>
+               <div class="col-sm-7">
                </div>
-               <div class="col-sm-8" align="left">
-                  <input type="text" required="Required" style="width: 220px" placeholder="rocker@spacejam.com">
+               <div id="createNewUserInputBox" class="col-sm-8">
+                  <input type="text" required="Required" placeholder="Email" class="usernameInput">
                </div>
             </div>
 
             <div class="row">
-               <div class="col-sm-4">
-                  <p align="right">Password: </p>
+               <div class="col-sm-7">
                </div>
-               <div class="col-sm-8" align="left">
-                  <input type="password" required="Required" style="width: 220px" placeholder="********">
+               <div id="createNewUserInputBox" class="col-sm-8">
+                  <input type="password" required="Required" placeholder="Password" class="usernameInput">
                </div>
             </div>
-
-            <hr>
-
+            <br><hr>
             <div class="row">
                <div class="col-4 offset-4 text-center">
-                  <input type="submit" class="btn btn-lg">
+                  <input type="submit" class="btn btn-lg" id="createSubmit">
                </div>
             </div>
          </form>

@@ -1,6 +1,6 @@
 /* backgroun parallax scorll */
 body  {
-  background-image: url("https://i0.wp.com/tdkom.com.br/wp-content/uploads/2017/11/bg-internet-overlay.jpg?ssl=1");
+  background-image: url("http://www.jewworldorder.org/wp-content/uploads/2018/03/Office-blurred-image-e1517939508136.jpg");
   min-height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,64 +17,104 @@ body  {
 }
 
 #loginBlock, #createAccountBlock {
-  background: rgba(236, 243, 244, .65);
-  width: 400px;
-  height: 400px;
-  margin: 7em auto;
-  border-radius: 2em;
-  box-shadow: 0px 11px 35px 2px black;
+  background: rgba(80, 105, 128, 0.6);
+  width: 350px;
+  height: 432px;
+  margin: 2.1em auto;
+  box-shadow: 0px 11px 28px .5px black;
 }
 
-.signIn {
-  padding-top: 40px;
-  color:  rgb(20, 142, 203);
+.signIn,h3 {
+  padding-top: 35px;
+  color:  white;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 23px;
 }
 
-.usernameInput, .passwordInput {
+.loginInput, #createNewUserInputBox {
   width: 76%;
-  color: rgb(20, 142, 203);
+  /* color: rgb(20, 142, 203); */
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
-  background: rgb(20, 142, 203, .35);
+  background: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   outline: none;
   box-sizing: border-box;
   border: 2px solid rgb(20, 142, 203));
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   margin-left: 46px;
   text-align: center;
-  margin-bottom: 27px;
+  margin-bottom: 7px;
   font-family: 'Ubuntu', sans-serif;
 }
 
-.submitButton {
+.signInButton{
+  color:white;  
   cursor: pointer;
-  border-radius: 5em;
-  color: rgb(20, 142, 203);
-  background: linear-gradient(to right,  rgb(20, 142, 203));
-  border: 0;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  margin-left: 35%;
+  width: 76%;
+  font-weight: 540;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background:	rgb(223, 100, 86);
+  padding: 11px 100px;
+  /* border: none; */
+  /* border-radius: 40px; */
+  /* outline: none; */
+  /* box-sizing: border-box; */
+  /* border: 2px solid rgb(20, 142, 203)); */
+  margin-top: 22px;
+  margin-left: 45px;
+  text-align: center;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 13px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+#createSubmit{
+  background:	rgb(223, 100, 86);
+
 }
 
 .forgotPassword {
-  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-  color: #E1BEE7;
-  padding-top: 15px;
+  cursor: pointer;
+  width: 76%;
+  color:white;
+  font-weight: 540;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgb(126, 99, 114);
+  padding: 11px 60px;
+  /* border: none; */
+  /* border-radius: 40px; */
+  /* outline: none; */
+  /* box-sizing: border-box; */
+  /* border: 2px solid rgb(20, 142, 203)); */
+  /* margin-top: 20px; */
+  margin-top: -8px;
+  margin-left: 45px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
-    
+
+#createAccount2{
+  background: rgba(46, 86, 122, 0.6);
+  padding-top: 12px;
+  padding-bottom: 23px;
+}
+
 .list-group-item {
   line-height: 2.5;
+}
+
+a{
+  color: white;
+  font-weight: 630;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.row{
+  font-size: 18px;
 }
