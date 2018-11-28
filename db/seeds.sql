@@ -35,25 +35,81 @@ INSERT INTO quizzes (question, answer)
 VALUES ("When deciding what to wear to work, which color does your supervisor detest above all others?", "Light Blue");
 INSERT INTO quizzes (question, answer) 
 VALUES ("What color is the carpet in Meeting Room D?", "There is no meeting room D");
----------------
+-----
+----- Michael
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (2, 1, "don't know", 0);
+VALUES (1, 1, "100", 0);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (2, 2, "don't know", 0);
+VALUES (1, 2, "3", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (1, 3, "don't know", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (1, 4, "don't know", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (1, 5, "There is no room D", 1);
+----- Jim
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (2, 1, "2", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (2, 2, "3", 1);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
 VALUES (2, 3, "don't know", 0);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (2, 4, "Sam", 1);
+VALUES (2, 4, "Throw them under the bus", 1);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (2, 5, "don't know", 0);
---
+VALUES (2, 5, "There is no room D", 1);
+----- Dwight
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (3, 1, "Awesome", 1);
+VALUES (3, 1, "2", 1);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (3, 2, "Great", 1);
+VALUES (3, 2, "3", 1);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (3, 3, "don't know", 0);
+VALUES (3, 3, "Sam", 1);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
-VALUES (3, 4, "Sam", 1);
+VALUES (3, 4, "Throw them under the bus", 1);
 INSERT INTO results (user_id, quiz_id, user_answer, score)
 VALUES (3, 5, "There is no room D", 1);
+----- Pam
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (4, 1, "2", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (4, 2, "3", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (4, 3, "don't know", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (4, 4, "Throw them under the bus", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (4, 5, "There is no room D", 1);
+----- Stanley
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (5, 1, "2", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (5, 2, "3", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (5, 3, "don't know", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (5, 4, "don't know", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (5, 5, "There is no room D", 1);
+----- Phyllis
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (6, 1, "0", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (6, 2, "3", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (6, 3, "don't know", 0);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (6, 4, "Throw them under the bus", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (6, 5, "There is no room D", 1);
+----- Oscar
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (8, 1, "2", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (8, 2, "3", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (8, 3, "Sam", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (8, 4, "Throw them under the bus", 1);
+INSERT INTO results (user_id, quiz_id, user_answer, score)
+VALUES (8, 5, "There is no room D", 1);
