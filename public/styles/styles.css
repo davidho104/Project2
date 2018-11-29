@@ -52,7 +52,7 @@ body  {
 }
 
 #chatNavbarLogout{
-  float: right;
+  position: absolute; right: 14px;"
 }
 
 .loginInput, #createNewUserInputBox {
