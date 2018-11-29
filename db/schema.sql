@@ -22,6 +22,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
   KEY `permission_id` (`permission_id`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`permission_id`) REFERENCES `roles` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 );

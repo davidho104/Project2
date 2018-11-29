@@ -2,26 +2,26 @@
 INSERT INTO roles (role) VALUES ("manager");
 INSERT INTO roles (role) VALUES ("employee");
 ------
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("michael", "Michael", "Scott", "michael.png", "1");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("jim", "Jim", "Halpert", "jim.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("dwight", "Dwight", "Schrute", "dwight.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("pam", "Pam", "Beasley", "pam.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("standley", "Stanley", "Hudson", "standley.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("phyllis", "Phyllis", "Lapin", "phyllis.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("angela", "Angela", "Martin", "angela.png",  "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("oscar", "Oscar", "Gutierrez", "oscar.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("kevin", "Kevin", "Malone", "kevin.png", "2");
-INSERT INTO users (username, first_name, last_name, picture, permission_id) 
-VALUES ("creed", "Creed", "Bratton", "creed.png", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("michael", "Michael", "Scott", "michael.png", "michael@dm.com", "570-123-0001", "1");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("jim", "Jim", "Halpert", "jim.png", "jim@dm.com", "570-123-0002", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("dwight", "Dwight", "Schrute", "dwight.png", "dwight@dm.com", "570-123-0003", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("pam", "Pam", "Beasley", "pam.png", "pam@dm.com", "570-123-0004", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("standley", "Stanley", "Hudson", "standley.png", "standley@dm.com", "570-123-0005", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("phyllis", "Phyllis", "Lapin", "phyllis.png", "phylllis@dm.com", "570-123-0006", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("angela", "Angela", "Martin", "angela.png", "angela@dm.com", "570-123-0007", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("oscar", "Oscar", "Gutierrez", "oscar.png", "oscar@dm.com", "570-123-0008", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("kevin", "Kevin", "Malone", "kevin.png", "kevin@dm.com", "570-123-0009", "2");
+INSERT INTO users (username, first_name, last_name, picture, email, phone, permission_id) 
+VALUES ("creed", "Creed", "Bratton", "creed.png", "creed@dm.com", "570-123-0010", "2");
 ---------------
 INSERT INTO quizzes (question, answer) 
 VALUES ("If work hours end at 5:00 pm, how many hours after work should you stay to convince the people you are a real employee?", "2");
