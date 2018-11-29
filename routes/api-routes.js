@@ -40,6 +40,8 @@ module.exports = function (app) {
     app.post("/api/testuser", function (req, res) {
         console.log(req.body);
     
+        var isManager;
+        
         if (req.body.email === "test1@test.com") {
             isManager = false;
         }
