@@ -257,6 +257,17 @@ module.exports = function (app) {
             .destroy({ where: { id: req.params.id } }).then(results => res.json(results));
     });
 
+    // ---- automentor api routes: other routes
+
+    // -- check if user is manager
+    app.get("/api/checkrole/:email", function (req, res) {
+
+        db.user
+            .findOne({ where: { email: req.params.email } }).then(data => {
+                db.role
+                    .findOne({ where: { id: data.permission_id } }).then(result => res.json(result));
+            });
+    });
     // ---- automentor api routes: Charts
 
     // Function to collect data for FIRST Graph
