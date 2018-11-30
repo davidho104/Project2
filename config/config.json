@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "testuser",
-    "password": "test123",
+    "username": "root",
+    "password": "righter",
     "database": "automentor_db",
-    "host": "192.168.1.12",
+    "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
   },
