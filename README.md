@@ -14,8 +14,9 @@ Jump-Start Bot was originally created by David Ho, Lauren Martinez, Raymond Won,
 
 
 ## API Routes:
-GET api/users - return all user profiles
-GET api/users/<email>   - return one user profile by email
-GET /api/quizzes - return all questions
-GET /api/results - return all results
-GET /api/results/<email> - return one user result by email
+
+* GET api/users - return all user profiles
+* GET api/users/<email>   - return one user profile by email
+* GET /api/quizzes - return all questions
+* GET /api/results - return all results
+* GET /api/results/<email> - return one user result by email
