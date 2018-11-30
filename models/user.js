@@ -11,10 +11,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             unique: true
         },
-        first_name: {
+        firstName: {
             type: DataTypes.STRING
         },
-        last_name: {
+        lastName: {
             type: DataTypes.STRING
         },
         email: {
@@ -27,10 +27,10 @@ module.exports = function (sequelize, DataTypes) {
         picture: {
             type: DataTypes.STRING
         },
-        permission_id: {
+        permissionId: {
             type: DataTypes.INTEGER
         },
-        department_id: {
+        departmentId: {
             type: DataTypes.INTEGER
         },
         createdAt: {

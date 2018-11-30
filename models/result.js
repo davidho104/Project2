@@ -7,13 +7,13 @@ module.exports = function (sequelize, DataTypes) {
             unique: true,
             field: 'id',
         },
-        user_id: {
+        userId: {
             type: DataTypes.INTEGER
         },
-        quiz_id: {
+        quizId: {
             type: DataTypes.INTEGER
         },
-        user_answer: {
+        userAnswer: {
             type: DataTypes.STRING,
         },
         score: {
