@@ -7,10 +7,10 @@ module.exports = function (sequelize, DataTypes) {
             unique: true,
             field: 'id',
         },
-        category_id: {
+        categoryId: {
             type: DataTypes.INTEGER
         },
-        type_id: {
+        typeId: {
             type: DataTypes.INTEGER
         },
         question: {
@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
         answer: {
             type: DataTypes.STRING
         },
-        next_id: {
+        nextId: {
             type: DataTypes.INTEGER
         },
         createdAt: {

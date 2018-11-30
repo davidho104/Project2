@@ -45,21 +45,21 @@ var sequelize = new Sequelize(mysqlDatabase, mysqlUsername, mysqlPassword, {
 //    "ReferenceError: [model] is not defined"
 db.role.hasOne(db.user, {
   foreignKey: {
-    name: "permission_id",
+    name: "permissionId",
     allowNull: true
   }
 });
 
 db.user.hasMany(db.result, {
   foreignKey: {
-    name: "user_id",
+    name: "userId",
     allowNull: false
   }
 });
 
 db.quiz.hasMany(db.result, {
   foreignKey: {
-    name: "quiz_id",
+    name: "quizId",
     allowNull: false
   }
 });
@@ -185,7 +185,7 @@ module.exports = function(app) {
       .findOne({ where: { email: req.params.email } })
       .then(function(data) {
         db.result
-          .findAll({ where: { user_id: data.id } })
+          .findAll({ where: { userId: data.id } })
           .then(function(result) {
             res.json(result);
           });
@@ -196,8 +196,8 @@ module.exports = function(app) {
       .findOne({ where: { email: req.params.email } })
       .then(function(data) {
         var whereStatement = {};
-        whereStatement.user_id = data.id;
-        whereStatement.quiz_id = req.params.quizid;
+        whereStatement.userId = data.id;
+        whereStatement.quizId = req.params.quizid;
 
         // Example of where clause
         db.result.findAll({ where: whereStatement }).then(function(result) {
@@ -215,7 +215,7 @@ module.exports = function(app) {
 
   app.get("/api/resultsbydate/:date/:userid", function(req, res) {
     var whereStatement = {};
-    whereStatement.user_id = req.params.userid;
+    whereStatement.userId = req.params.userid;
 
     // not done yet
     db.result.findAll({ where: whereStatement }).then(function(result) {
@@ -228,7 +228,7 @@ module.exports = function(app) {
     whereStatement.username = req.params.username;
 
     // Example of Join Statement
-    // SELECT * FROM users JOIN results ON (users.id = results.user_id) where users.username = 'jim';
+    // SELECT * FROM users JOIN results ON (users.id = results.userId) where users.username = 'jim';
     // required=true means inner join
     // required=false means left outer join
     db.user
@@ -277,7 +277,7 @@ module.exports = function(app) {
       .findOne({ where: { email: req.params.email } })
       .then(function(data) {
         db.role
-          .findOne({ where: { id: data.permission_id } })
+          .findOne({ where: { id: data.permissionId } })
           .then(function(result) {
             res.json(result);
           });
@@ -289,7 +289,7 @@ module.exports = function(app) {
   function getData(callback) {
     sequelize
       .query(
-        "SELECT users.first_name, SUM(results.score) FROM results JOIN users ON results.user_id = users.id GROUP BY users.first_name"
+        "SELECT users.firstName, SUM(results.score) FROM results JOIN users ON results.userId = users.id GROUP BY users.firstName"
       )
       .spread(function(results1, metadata) {
         // Results will be resulting array and metadata will contain the number of affected rows.
@@ -313,7 +313,7 @@ module.exports = function(app) {
   function getData2(callback) {
     sequelize
       .query(
-        "SELECT quizzes.id, SUM(results.score) FROM results JOIN quizzes ON results.quiz_id = quizzes.id GROUP BY quizzes.id"
+        "SELECT quizzes.id, SUM(results.score) FROM results JOIN quizzes ON results.quizId = quizzes.id GROUP BY quizzes.id"
       )
       .spread(function(results2, metadata) {
         // Results will be resulting array and metadata will contain the number of affected rows.
