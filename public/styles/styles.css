@@ -36,7 +36,7 @@ body  {
   font-size: 23px;
 }
 
-.usernameInput, .passwordInput {
+.loginInputs{
   width: 76%;
   /* color: rgb(20, 142, 203); */
   color: rgb(14, 79, 165);
@@ -79,7 +79,10 @@ body  {
 
 #createSubmit{
   background:	rgb(223, 100, 86);
+}
 
+#managerPick, #employeePick{
+  background: rgb(21, 92, 184);
 }
 
 .forgotPassword {
@@ -89,7 +92,7 @@ body  {
   font-weight: 540;
   font-size: 14px;
   letter-spacing: 1px;
-  background: rgb(126, 99, 114);
+  background: rgb(102, 99, 126);
   padding: 11px 60px;
   /* border: none; */
   /* border-radius: 40px; */
@@ -124,4 +127,16 @@ a{
 
 .row{
   font-size: 18px;
+}
+
+#navbarID, #submitmsg{
+background: rgba(46, 86, 122, 0.6);
+}
+
+#logoutBtn{
+  color: black;
+}
+
+#usermsg{
+  color: rgb(14, 79, 165);  
 }
