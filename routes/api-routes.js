@@ -9,7 +9,35 @@ var db = require("../models");
 var Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
-var sequelize = new Sequelize('automentor_db', 'root', 'righter', {
+// mysql profile: host, port, user and password
+require("dotenv").config();
+let keys = require("../keys.js");
+
+// local dev env
+let mysql_database = keys.dev.database;
+let mysql_username = keys.dev.username;
+let mysql_password = keys.dev.password;
+let mysql_host = keys.dev.host;
+let mysql_port = keys.dev.port;
+
+
+// Heroku env
+if (process.env.JAWSDB_URL) {
+   let str = process.env.JAWSDB_URL;
+   let arr = str.split("/");
+   let arr2 = arr[2].split(":");
+   let arr3 = arr2[1].split("@");
+
+    mysql_database = arr[3];
+    mysql_username = arr2[0];
+    mysql_password = arr3[0];
+    mysql_host = arr3[1];
+    mysql_port = arr2[2];
+};
+
+var sequelize = new Sequelize(mysql_database, mysql_username, mysql_password, {
+    host: mysql_host,
+    port: mysql_port,
     dialect: "mysql"
 });
 
