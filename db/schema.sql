@@ -7,6 +7,14 @@ USE automentor_db;
 
 -- note: you should let sequelize to generate the tables instead
 
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `role` (`role`)
+);
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) DEFAULT NULL,
@@ -22,6 +30,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
   KEY `permission_id` (`permission_id`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`permission_id`) REFERENCES `roles` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 );
@@ -56,13 +65,6 @@ CREATE TABLE `results` (
   CONSTRAINT `results_ibfk_2` FOREIGN KEY (`quiz_id`) REFERENCES `quizzes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
-  UNIQUE KEY `role` (`role`)
-);
 
 CREATE INDEX idx_users_username ON users (username);
 CREATE INDEX idx_users_name ON users (first_name, last_name); 
