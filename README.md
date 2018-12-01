@@ -37,6 +37,5 @@ Jump-Start Bot was originally created by David Ho, Laurence Martinez, Raymond Wo
 * PUT /api/results/<id> - update result
   
 ### Deployment
-Through Heroku at: https://vast-fjord-82383.herokuapp.com/
+Through Heroku at: https://jump-start.herokuapp.com/
 
-<!-- * -->
