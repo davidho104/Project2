@@ -104,18 +104,15 @@ firebase.auth().onAuthStateChanged(function (user) {
             $.post("/auth", idToken)
                 .then();
         });
-        
-        $.get("/api/checkrole/" + user.email, function(data){         
+
+        $.get("/api/checkrole/" + user.email, function (data) {
             console.log(data.role);
-            if(data.role === "employee"){
-                window.location = "tester.html";
-            }
-            else{
+            if (data.role === "employee") {
+                window.location = "chatPage.html";
+            } else {
                 window.location = "manager.html";
             }
         })
-        
-        // window.location = "tester.html";
 
     } else {
         // User is signed out.

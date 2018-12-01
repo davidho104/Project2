@@ -13,8 +13,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/landingPage.html"));
   });
 
-  app.get("/profile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/profile.html"));
+  // app.get("/profile", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/profile.html"));
+  // });
+
+  app.get("/chat", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/chatPage.html"));
   });
 
   app.get("/manager", function(req, res) {
