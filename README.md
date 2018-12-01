@@ -13,7 +13,7 @@ What is in MYSQL?: The questions, the answers, the accounts of each player, the 
 
 ## Contributors
 
-Jump-Start Bot was originally created by David Ho, Lauren Martinez, Raymond Won, and Brian Swift.
+Jump-Start Bot was originally created by David Ho, Laurence Martinez, Raymond Won, and Brian Swift.
 
 
 ## API Routes:
