@@ -1,6 +1,6 @@
-# Jump-Start Bot
+# Jump-Start
 
-JUMP-START (℠) is training program for your first day at work that will provide a series of challenges to test how mush you absorbed through your orientation.
+JUMP-START (℠) is training program for your first day at work that will provide a series of challenges to test how much you absorbed through your orientation.
 
 Designed to relieve first-day jitters, this app functions as a game with timers and scores. The player will provide text based responses to a chat-bot, and will have an opportunity to ask questions about those topics.
 
