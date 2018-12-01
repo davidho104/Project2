@@ -18,12 +18,30 @@ Jump-Start Bot was originally created by David Ho, Laurence Martinez, Raymond Wo
 
 <hr>
 
+## Technology
+
+* Firebase authentication
+* Node.js Express server
+* Sequelize ORM
+* MySQL database
+* Google Charts API
+
 ## API Routes:
-* GET api/users - return all user profiles
-* GET api/users/<email>   - return one user profile by email
+* GET /api/users - return all user profiles
+* GET /api/users/<email>   - return one user profile by email
 * GET /api/quizzes - return all questions
 * GET /api/results - return all results
 * GET /api/results/<email> - return one user result by email
+* GET /api/checkrole/<email> - return role i.e. manager, employee
+
+* POST /api/users - insert user
+* POST /api/quizzes - insert question
+* POST /api/results - insert results
+
+* PUT /api/users/<email> - update user
+* PUT /api/quizzes/<id> - update question
+* PUT /api/results/<id> - update result
+  
   
 <hr>
 
