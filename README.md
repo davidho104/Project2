@@ -6,17 +6,14 @@ Designed to relieve first-day jitters, this app functions as a game with timers 
 
 Each time an employee completes the challenges they can compare their scores with previous "players." Employers can see which questions each employee got right through the manager analytics page.
 
-<hr>
 
 ## MySQL Database
 What is in MYSQL?: The questions, the answers, the accounts of each player, the scores and times of each attempt.
 
-<hr>
 
 ## Contributors
 Jump-Start Bot was originally created by David Ho, Laurence Martinez, Raymond Won, and Brian Swift.
 
-<hr>
 
 ## Technology
 
@@ -42,9 +39,6 @@ Jump-Start Bot was originally created by David Ho, Laurence Martinez, Raymond Wo
 * PUT /api/quizzes/<id> - update question
 * PUT /api/results/<id> - update result
   
-  
-<hr>
-
 ### Deployment
 Through Heroku at: https://vast-fjord-82383.herokuapp.com/
 
