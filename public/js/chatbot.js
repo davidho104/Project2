@@ -26,7 +26,7 @@ $("#logoutBtn").on("click", function (event) {
     });
 });
 
-// — checking if user loggin
+// — checking if user is logged in
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
@@ -64,11 +64,10 @@ firebase.auth().onAuthStateChanged(function (user) {
             });
         });
 
-
-
     } else {
         // User is signed out.
         $(".status").text("You are not loggedin.");
         console.log("not loggedin");
     }
+    $("#navbarName").text("\xa0\xa0\xa0\xa0"+email.split("@")[0].toUpperCase());
 });

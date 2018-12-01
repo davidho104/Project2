@@ -49,9 +49,9 @@
                         </div>
                         <br><br><br>
                     </div>
-                    <input class="loginInputs" type="text" align="center" placeholder="Username">
-                    <input class="loginInputs" type="password" align="center" placeholder="Password">
-                    <input class="loginInputs" type="email" align="center" placeholder="Email">
+                    <input class="loginInputs" id="nameInput" type="text" align="center" placeholder="Username">
+                    <input class="loginInputs" id="passwordInput" type="password" align="center" placeholder="Password">
+                    <input class="loginInputs" id="emailInput" align="center" placeholder="Email">
                     <!-- <p class="signInButton" align="center">Submit</p> -->
                     <br><br>
                     <div class="row">
@@ -73,6 +73,9 @@
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script src="./js/login.js"></script>
 <script>
     var count = 1;
 
@@ -80,8 +83,7 @@
         if (count == 0) {
             document.getElementById("managerPick").style.background = "rgb(21, 92, 184)";
             count = 1;
-        }
-        else{
+        } else {
             document.getElementById("managerPick").style.background = "green";
             count = 0;
         }
@@ -91,8 +93,7 @@
         if (count == 0) {
             document.getElementById("employeePick").style.background = "rgb(21, 92, 184)";
             count = 1;
-        }
-        else{
+        } else {
             document.getElementById("employeePick").style.background = "green";
             count = 0;
         }
