@@ -31,24 +31,20 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light" id=navbarID>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a id="navbarName" class="navbar-brand" href="#">Manager Page</a>
+            <a id="navbarName" class="navbar-brand" href="#">(Name will go here)</a>
+
             <form class="form-inline my-2 my-lg-0" id="chatNavbarLogout">
-                <button class="btn btn-danger" id="logoff" type="submit">Logoff</button>
-                <a href="/profile" class="btn btn-primary">
-                    <span class="fa"></span>Profile Page</a>
-                <a href="/home" class="btn btn-primary">
-                    <span class="fa"></span>Home Page</a>
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Log out</button>
+                <button class="btn my-2 my-sm-0" id="logoutBtn" type="submit">Log out</button>
             </form>
         </div>
     </nav>
-
+    <br><br><br>
     <div class="container">
         <div class="row">
             <!-- Most Recent Member Card -->
@@ -72,14 +68,14 @@
             <div class="col-12 text-center">
                 <!--id that will hold the first chart-->
                 <div id="chart">graph 1</div>
-                <button id="btn_refresh">REFRESH</button>
+                <button id="btn_refresh">Refresh</button>
             </div>
         </div>
         <div class="row">
             <div class="col-12 text-center">
                 <!--id that will hold the second chart-->
                 <div id="chart2">graph 2</div>
-                <button id="btn_refresh">REFRESH</button>
+                <button id="btn_refresh">Refresh</button>
             </div>
         </div>
     </div>

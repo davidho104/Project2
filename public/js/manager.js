@@ -41,10 +41,10 @@ firebase.auth().onAuthStateChanged(function (user) {
         // to Global variable
         currentuser = user.uid;
 
-        console.log("loggedin");
+        console.log("logged in");
         console.log(uid);
-        $(".status").text("Welcome. You are loggedin.");
-        $(".user-id-display").append(uid);
+        $(".status").text("Welcome. You are currently logged in.");
+        // $(".user-id-display").append(uid);
 
         // -- sending token
         user.getIdToken().then(function (data) {
@@ -188,7 +188,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     } else {
         // User is signed out.
-        $(".status").text("You are not loggedin.");
-        console.log("not loggedin");
+        $(".status").text("You are not currently logged in.");
+        console.log("not logged in");
     }
 });
