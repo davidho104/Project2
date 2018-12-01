@@ -30,8 +30,7 @@ body {
   box-shadow: 0px 11px 28px .5px black;
 }
 
-.signIn,
-h3 {
+.signIn,h3 {
   padding-top: 35px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
@@ -39,8 +38,17 @@ h3 {
   font-size: 23px;
 }
 
+#instructText{
+  color: black;
+}
+
+.startgame, .answer{
+  background: rgb(14, 79, 165);
+  color: white;
+}
+
 .emailInput,
-.passwordInput {
+.passwordInput, .loginInputs {
   width: 76%;
   /* color: rgb(20, 142, 203); */
   color: rgb(14, 79, 165);
@@ -82,11 +90,13 @@ h3 {
 }
 
 #createSubmit {
+  color: white;
   background: rgb(223, 100, 86);
 }
 
 #managerPick,
 #employeePick {
+  color: white;
   background: rgb(21, 92, 184);
 }
 
@@ -141,25 +151,36 @@ a {
   z-index: 1;
 }
 
-#submitmsg {
+#navbarName {
+  color: white;
+}
+
+/* #chatNavbarLogout{
+  float: right;
+} */
+
+
+
+/* #submitmsg {
   background: rgba(46, 86, 122, 0.6);
 }
+
+#usermsg {
+  color: rgb(14, 79, 165);
+} */
 
 #logoutBtn {
   color: black;
 }
 
-#usermsg {
-  color: rgb(14, 79, 165);
-}
 
 #chatBlock {
   background: rgba(255, 255, 255, 0.63);
-  width: 900px;
-  height: 500px;
+  width: 1000px;
+  height: 600px;
   margin: 2.1em auto;
   box-shadow: 0px 11px 28px .5px black;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #errorBox {

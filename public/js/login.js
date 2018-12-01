@@ -12,13 +12,13 @@ firebase.initializeApp(config);
 let currentuser;
 
 // Capture Sign-up Button Click
-$("#add-user").on("click", function (event) {
+$("#createSubmit").on("click", function (event) {
     // Don't refresh the page!
     event.preventDefault();
 
     // Capture User Inputs and store them into variables
-    var email = $(".email-input").val().trim();
-    var password = $(".password-input").val().trim();
+    var email = $("#emailInput").val().trim();
+    var password = $("#passwordInput").val().trim();
 
     // Console log each of the user inputs to confirm we are receiving them
     // console.log(email);
@@ -28,7 +28,7 @@ $("#add-user").on("click", function (event) {
     // sign up - check your firebase authorization
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
         console.log("sign up successful.");
-        window.location = "profile";
+        window.location = "landingPage.html";
     }, function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -36,7 +36,6 @@ $("#add-user").on("click", function (event) {
         console.log(errorCode);
         console.log(errorMessage);
     });
-
 });
 
 // Capture Login Button Click
