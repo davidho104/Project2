@@ -1,8 +1,9 @@
 /* background parallax scroll */
-*{
+* {
   color: black;
 }
-body  {
+
+body {
   background-image: url("../assets/img/office\ background.jpg");
   min-height: 400px;
   background-size: cover;
@@ -14,13 +15,14 @@ body  {
 
 #companyLogo {
   opacity: .75;
-  display:block;
+  display: block;
   /* margin: 5px; */
   text-align: center;
   background-position: center top;
 }
 
-#loginBlock, #createAccountBlock {
+#loginBlock,
+#createAccountBlock {
   background: rgba(80, 105, 128, 0.6);
   width: 350px;
   height: 432px;
@@ -30,13 +32,23 @@ body  {
 
 .signIn,h3 {
   padding-top: 35px;
-  color:  white;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 23px;
 }
 
-.emailInput, .passwordInput{
+#instructText{
+  color: black;
+}
+
+.startgame, .answer{
+  background: rgb(14, 79, 165);
+  color: white;
+}
+
+.emailInput,
+.passwordInput, .loginInputs {
   width: 76%;
   /* color: rgb(20, 142, 203); */
   color: rgb(14, 79, 165);
@@ -57,14 +69,14 @@ body  {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.signInButton{
-  color:white;  
+.signInButton {
+  color: white;
   cursor: pointer;
   width: 76%;
   font-weight: 540;
   font-size: 14px;
   letter-spacing: 1px;
-  background:	rgb(223, 100, 86);
+  background: rgb(223, 100, 86);
   padding: 11px 100px;
   /* border: none; */
   /* border-radius: 40px; */
@@ -77,18 +89,21 @@ body  {
   font-family: 'Ubuntu', sans-serif;
 }
 
-#createSubmit{
-  background:	rgb(223, 100, 86);
+#createSubmit {
+  color: white;
+  background: rgb(223, 100, 86);
 }
 
-#managerPick, #employeePick{
+#managerPick,
+#employeePick {
+  color: white;
   background: rgb(21, 92, 184);
 }
 
 .forgotPassword {
   cursor: pointer;
   width: 76%;
-  color:white;
+  color: white;
   font-weight: 540;
   font-size: 14px;
   letter-spacing: 1px;
@@ -108,7 +123,7 @@ body  {
   font-family: 'Ubuntu', sans-serif;
 }
 
-#createAccount2{
+#createAccount2 {
   background: rgba(46, 86, 122, 0.6);
   padding-top: 10px;
   padding-bottom: 15px;
@@ -118,37 +133,56 @@ body  {
   line-height: 2.5;
 }
 
-a{
+a {
   color: white;
   font-weight: 630;
   font-size: 16px;
   text-decoration: none;
 }
 
-.row{
+.row {
   font-size: 18px;
 }
 
-#navbarID, #submitmsg{
-background: rgba(46, 86, 122, 0.6);
+#navbarID {
+  background: rgba(46, 86, 122, 0.6);
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
-#logoutBtn{
+#navbarName {
+  color: white;
+}
+
+/* #chatNavbarLogout{
+  float: right;
+} */
+
+
+
+/* #submitmsg {
+  background: rgba(46, 86, 122, 0.6);
+}
+
+#usermsg {
+  color: rgb(14, 79, 165);
+} */
+
+#logoutBtn {
   color: black;
 }
 
-#usermsg{
-  color: rgb(14, 79, 165);  
-}
 
-#chatBlock{
+#chatBlock {
   background: rgba(255, 255, 255, 0.63);
-  width: 900px;
-  height: 500px;
+  width: 1000px;
+  height: 600px;
   margin: 2.1em auto;
   box-shadow: 0px 11px 28px .5px black;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
-#errorBox{
+
+#errorBox {
   background: rgba(80, 105, 128, 0.6);
 }

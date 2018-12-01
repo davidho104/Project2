@@ -14,13 +14,13 @@ firebase.initializeApp(config);
 let currentuser;
 
 // sign off
-$("#logoff").on("click", function (event) {
+$("#logoutBtn").on("click", function (event) {
     // Don't refresh the page!
     event.preventDefault();
 
     firebase.auth().signOut().then(function () {
         console.log("sign off successful.");
-        window.location = 'login';
+        window.location = 'landingPage.html';
     }, function (error) {
         console.log(error);
     });
@@ -40,19 +40,17 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         // to Global variable
         currentuser = user.uid;
-
-        console.log("loggedin");
+        // debugger;
+        console.log("logged in");
         console.log(uid);
-        $(".status").text("Welcome. You are loggedin.");
-        $(".user-id-display").append(uid);
+        $(".status").text("You are currently logged in.");
+        // $(".user-id-display").append(uid);
 
         // -- sending token
         user.getIdToken().then(function (data) {
             // Send Token to backend via HTTP
 
             // IS THIS WHERE THE CHART STUFF HAS TO GO?
-
-
 
 
             // STUFF FOR CHARTS
@@ -63,9 +61,9 @@ firebase.auth().onAuthStateChanged(function (user) {
                 callback: init,
                 packages: ["corechart", "bar"]
             })
-            $("#btn_refresh").click(function () {
-                init();
-            })
+            // $("#btn_refresh").click(function () {
+            //     init();
+            // })
 
             let processedData;
             let processedData2;
@@ -84,6 +82,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                 let arr = new Array();
                 jQuery.each(data, function (index, object) {
                     arr.push(object["id"], parseInt(object["SUM(results.score)"]));
+
                 })
                 console.log("first array??")
                 console.log(arr);
@@ -188,7 +187,9 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     } else {
         // User is signed out.
-        $(".status").text("You are not loggedin.");
-        console.log("not loggedin");
+        $(".status").text("You currently logged out.");
+        console.log("not logged in");
     }
+    $("#navbarName").text(email.split("@")[0].toUpperCase());
+    console.log("zzz" + email.split("@")[0]);
 });
